@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-FIZZ = "Fizz"
-BUZZ = "Buzz"
-
 def fizzbuzz():
     for number in range(1, 101):
-        if (number % 3 and number % 5):
-            print("%s%s" % (FIZZ, BUZZ), end=' ')
-        elif (number % 3):
-            print("%s" % (FIZZ), end=' ')
-        elif (number % 5):
-            print("%s" % (BUZZ), end=' ')
+        """
+        prints the numbers from 1 to 100 separated by a space
+
+        prints `Fizz` instead of number for multiples of three
+        prints `Buzz` instead of number for multiples of five
+        prints `FizzBuzz` instead of number for multiples of three and five
+        """
+        if (number % 3 == 0) and (number % 5 == 0):
+            print("FizzBuzz", end=" ")
+        elif (number % 3 == 0):
+            print("Fizz", end=" ")
+        elif (number % 5 == 0):
+            print("Buzz", end=" ")
         else:
-            print("%d" % (number), end=' ')
+            print(number, end=" ")
